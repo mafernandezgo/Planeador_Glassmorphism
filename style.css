@@ -1,0 +1,194 @@
+body{
+    font-family: 'Comfortaa', cursive;
+    background-image: linear-gradient(to left bottom ,#ed417c,#ff4f78,#fc6f8b, #ff7d80, #ff968e,#ffa5aa, #ffb7b0,#ffd0c9,#ffe1d0, #ffe29f);
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    width: 100vw;
+}
+
+.main{
+    display: flex;
+    width: 95%;
+}
+
+.glassmorphism{
+    background: rgba( 255, 255, 255, 0.10 );
+    box-shadow: 08px 12px 10px  rgba(246, 95, 128,0.3);
+    -webkit-backdrop-filter: blur( 4px );
+            backdrop-filter: blur( 4px );
+    border-radius: 16px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.goals, .planner{
+    margin:20px;
+    width: 100%;
+    min-height: 450px;
+
+}
+
+.goals{
+    max-width: 300px;
+}
+
+.goal{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.goal img{
+    border-radius: 50%;
+    width: 40px;
+    /* padding: 10px;
+    margin: 10px 25px ; */
+}
+
+h1, .margin {
+    margin: 20px 25px;
+}
+
+.dates{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 25px;
+    gap:15px;
+    text-align: center;
+    
+}
+
+.activity{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    margin: 15px 0px;
+    max-width: 10em;
+}
+
+.activity::after{
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color:rgba(246, 95, 128,0.3);
+    position: absolute;
+    left: 0%;
+    border-radius: 16px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+    color:rgba(246, 95, 128,0.3);
+}
+
+.activity.end::after{
+    content: "done";
+    width: 100%;
+    height: 100%;
+    background-color:rgba(246, 95, 128,0.9);
+    position: absolute;
+    left: 0%;
+    border-radius: 16px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+color: white;
+}
+
+.activity:hover::after{
+    width: 100%;
+}
+
+.activity div{
+    min-height: 5em;
+}
+
+.title{
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    margin: auto;
+    font-size: 0.8em;
+}
+
+h3{
+    margin: 10px 0px;
+    font-size: 1.2em;
+}
+
+.description p{
+    margin: 0px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+/* counter */
+
+.goal > div{
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+
+}
+.counter{
+    align-items: center;
+    bottom: 0;
+    color: white;
+    display: flex;
+    font-size: 0.7em;
+    font-weight: bolder;
+    height: 20px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    width: 20px;
+}
+
+.green{
+    background-color: rgba(175, 255, 0, 0.40)
+}
+
+.red{
+    background-color:  rgba(255, 0, 0, 0.40);
+}
+/*Bubbles*/
+
+.bubble {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.bubble-one {
+    height: 80px;
+    left: 300px;
+    top: 10px;
+    width: 80px;
+}
+
+.bubble-two {
+    height: 230px;
+    right: 200px;
+    top: -50px;
+    width: 230px;
+}
+
+.bubble-three {
+    height: 50px;
+    right: 450px;
+    top: -20px;
+    width: 50px;
+}
+
+.bubble-four {
+    bottom: 40px;
+    height: 100px;
+    left: -30px;
+    width: 100px;
+}
+
+.bubble-five {
+    /* border: 5px solid red; */
+    bottom: 0px;
+    height: 400px;
+    right: 0px;
+    width: 400px;
+}
